@@ -1,0 +1,14 @@
+{
+  "name": "Avisar gestor sobre novo acesso",
+  "enabled": true,
+  "owner": { "type": "IDENTITY", "name": "%%DONO_WORKFLOW%%" },
+  "definition": {
+    "start": "Enviar email",
+    "steps": {
+      "Enviar email": {
+        "actionId": "sp:send-email",
+        "attributes": { "recipientEmailList": ["%%EMAIL_IAM%%"] }
+      }
+    }
+  }
+}
