@@ -1,0 +1,22 @@
+{
+  "name": "Login - Primeira letra + Sobrenome",
+  "type": "lower",
+  "attributes": {
+    "input": {
+      "type": "concat",
+      "attributes": {
+        "values": [
+          {
+            "type": "substring",
+            "attributes": {
+              "begin": 0,
+              "end": 1,
+              "input": { "type": "identityAttribute", "attributes": { "name": "firstname" } }
+            }
+          },
+          { "type": "identityAttribute", "attributes": { "name": "lastname" } }
+        ]
+      }
+    }
+  }
+}
